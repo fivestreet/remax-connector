@@ -3,7 +3,7 @@ HOST: https://domain.com
 
 # RE/MAX and the FiveStreet Connector
 
-The FiveStreet Connector will receive a lead from RE/Max, process the lead and send to FiveStreet. Once FiveStreet accepts the request, the FiveStreet Connector will return a 200 HTTP code to RE/Max. If there is an error during this process, an error message will be sent back to RE/Max. 
+The FiveStreet Connector will receive a lead from RE/MAX, process the lead and send to FiveStreet. Once FiveStreet accepts the request, the FiveStreet Connector will return a 200 HTTP code to RE/MAX. If there is an error during this process, an error message will be sent back to RE/MAX. 
 
 # Authentication
 
@@ -13,7 +13,7 @@ All requests must include a Authorization HTTP header, or a 401 (Unauthorized) r
 
 # HTTP Errors
 
-Errors will be return using the following content-type. https://tools.ietf.org/html/draft-ietf-appsawg-http-problem-00
+Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ietf-appsawg-http-problem-00)
 
 ## Lead [/leads]
 
@@ -30,13 +30,13 @@ Errors will be return using the following content-type. https://tools.ietf.org/h
                     "phone": "222-333-1234",
                     "message": "Belize, Belize",
                     "property": {
-                      "address": "111 street address city ST zipcode",
+                      "address": "111 street address city State zipcode",
                       "url": "http://property.com/url",
                       "list_price": "250000",
                       "mls_id": "88658565886"
                     },
                     "agent": {
-                      "fivestreet_eamil": "agent@fivestreet.me",
+                      "fivestreet_email": "agent@fivestreet.me",
                       "office": "Washington D.C."
                     },
                     "extra_data": {

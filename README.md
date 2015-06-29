@@ -62,4 +62,4 @@ https://tools.ietf.org/html/draft-ietf-appsawg-http-problem-00
   2. How are we planning on handling if fivestreet is down?
   3. What if another system is down?
   4. Is it fair to say, all leads come from a listing?
-  5. Remove Other custome fields, since they are not defined.
+  5. Remove Other custom fields, since they are not defined.

@@ -30,17 +30,22 @@ Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ie
                     "phone": "222-333-1234",
                     "message": "Belize, Belize",
                     "property": {
-                      "address": "111 street address city State zipcode",
-                      "url": "http://property.com/url",
-                      "list_price": "250000",
-                      "mls_id": "88658565886"
+                        "address": {
+                            "street":"111 street address",
+                            "city" : "Seattle",
+                            "state" : "WA",
+                            "zipcode" : "98230"
+                        },
+                        "url": "http://property.com/url",
+                        "list_price": "250000",
+                        "mls_id": "88658565886"
                     },
                     "agent": {
-                      "fivestreet_email": "agent@fivestreet.me",
-                      "office": "Washington D.C."
+                        "fivestreet_email": "agent@fivestreet.me",
+                        "office": "Washington D.C."
                     },
                     "extra_data": {
-                      "key": "value"
+                        "key": "value"
                     }
                 }
             }

@@ -41,7 +41,7 @@ Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ie
                         "mls_id": "88658565886"
                     },
                     "agent": {
-                        "id" : "12345",
+                        "remax_id" : "12345",
                         "type" : "Connected",
                         "fivestreet_email": "agent@fivestreet.me",
                         "office": "Washington D.C."

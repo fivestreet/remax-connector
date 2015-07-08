@@ -42,7 +42,7 @@ Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ie
                     },
                     "agent": {
                         "remax_id" : "12345",
-                        "type" : "Connected",
+                        "type" : "connected",
                         "fivestreet_email": "agent@fivestreet.me",
                         "office": "Washington D.C."
                     },
@@ -51,6 +51,9 @@ Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ie
                     }
                 }
             }
+    
+    + All values are strings
+    + Agent Type can be of type "connected", "favourited", "listing_agent"
 
 + Response 401 (application/problem+json)
 

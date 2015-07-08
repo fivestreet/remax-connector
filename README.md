@@ -47,6 +47,8 @@ Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ie
                         "office_id": "A987678"
                     },
                     "extra_data": {
+                        "is_rental" : "true",
+                        "web_activity_url": "http://webactivity.url/",
                         "key": "value"
                     }
                 }

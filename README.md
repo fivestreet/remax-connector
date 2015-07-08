@@ -42,7 +42,7 @@ Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ie
                     },
                     "agent": {
                         "remax_id" : "12345",
-                        "type" : "connected",
+                        "type" : "favorited",
                         "fivestreet_email": "agent@fivestreet.me",
                         "office_id": "A987678"
                     },

@@ -34,7 +34,8 @@ Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ie
                             "street":"111 street address",
                             "city" : "Seattle",
                             "state" : "WA",
-                            "zipcode" : "98230"
+                            "zipcode" : "98230",
+                            "country" : "US"
                         },
                         "url": "http://property.com/url",
                         "list_price": "250000",

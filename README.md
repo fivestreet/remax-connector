@@ -57,6 +57,128 @@ Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ie
     
     + All values are strings
     + Agent Type can be of type "connected", "favourited", "listing_agent"
+    +   <table style="undefined;table-layout: fixed; width: 776px">
+        <colgroup>
+        <col style="width: 230px">
+        <col style="width: 141px">
+        <col style="width: 130px">
+        <col style="width: 275px">
+        </colgroup>
+          <tr>
+            <th>Name</th>
+            <th>Format</th>
+            <th>Required</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>source</td>
+            <td>string</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>sub_source</td>
+            <td>string</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>name</td>
+            <td>string</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>email</td>
+            <td>string</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>phone</td>
+            <td>string</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>message</td>
+            <td>string</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>property.address.street</td>
+            <td>string</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>property.address.city</td>
+            <td>string</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>property.address.state</td>
+            <td>string</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>property.address.zipcode</td>
+            <td>string</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>property.address.country</td>
+            <td>"US", "CA"</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>property.url</td>
+            <td>string</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>property.list_price</td>
+            <td>string</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>property.mls_id</td>
+            <td>string</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>agent.remax_id</td>
+            <td>string</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>agent.type</td>
+            <td>"favorited", "connected", "listing_agent"</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>agent.office_id</td>
+            <td>string</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>extra_data</td>
+            <td>&lt;string,string&gt;</td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
 
 + Response 401 (application/problem+json)
 

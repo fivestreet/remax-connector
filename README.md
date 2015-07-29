@@ -162,7 +162,7 @@ Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ie
           </tr>
           <tr>
             <td>agent.type</td>
-            <td>"favorited", "connected", "listing_agent"</td>
+            <td>"favorited",<br/>"connected",<br/>"listing_agent"</td>
             <td></td>
             <td>The type of routing logic to employ</td>
           </tr>

@@ -42,17 +42,17 @@ Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ie
                         "list_price": "250000",
                         "mls_id": "88658565886"
                     },
-                    "agent": {
-                        "remax_id" : "12345",
-                        "type" : "favorited",
-                        "office_id": "A987678"
-                    },
                     "extra_data": {
                         "is_rental" : "true",
                         "web_activity_url": "http://webactivity.url/",
                         "key": "value"
                     }
-                }
+                },
+                "routing": {
+                        "agent_id" : "12345",
+                        "type" : "favorited",
+                        "office_id": "A987678"
+                    }
             }
     
     + All values are strings

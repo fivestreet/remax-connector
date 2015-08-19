@@ -56,7 +56,7 @@ Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ie
             }
     
     + All values are strings
-    + Agent Type can be of type "connected", "favourited", "listing_agent"
+    + Routing Type can be of type "connected", "favourited", "listing_agent", "new_lead"
     + <table style="undefined;table-layout: fixed; width: 849px">
         <colgroup>
         <col style="width: 188px">
@@ -155,28 +155,28 @@ Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ie
             <td>MLS ID for the subject property</td>
           </tr>
           <tr>
-            <td>agent.remax_id</td>
+            <td>extra_data</td>
+            <td>&lt;string,string&gt;</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>routing.agent_id</td>
             <td>string</td>
             <td></td>
             <td>The RE/MAX ID for the agent</td>
           </tr>
           <tr>
-            <td>agent.type</td>
+            <td>routing.type</td>
             <td>"favorited",<br/>"connected",<br/>"listing_agent"</td>
             <td></td>
             <td>The type of routing logic to employ</td>
           </tr>
           <tr>
-            <td>agent.office_id</td>
+            <td>routing.office_id</td>
             <td>string</td>
             <td></td>
             <td>The office ID for the agent</td>
-          </tr>
-          <tr>
-            <td>extra_data</td>
-            <td>&lt;string,string&gt;</td>
-            <td></td>
-            <td></td>
           </tr>
         </table>
 

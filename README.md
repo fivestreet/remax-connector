@@ -168,7 +168,7 @@ Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ie
           </tr>
           <tr>
             <td>routing.type</td>
-            <td>"favorited",<br/>"connected",<br/>"listing_agent"</td>
+            <td>"favorited",<br/>"connected",<br/>"listing_agent",<br/>"new_lead"</td>
             <td></td>
             <td>The type of routing logic to employ</td>
           </tr>

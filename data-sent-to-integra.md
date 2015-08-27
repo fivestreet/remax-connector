@@ -1,3 +1,7 @@
+# Data sent to Integra
+
+Webhooks to api endpoints to be provided by Integra and a rough structure of the json representation that should be expected.
+
 ## Agent
 
 __[POST] to a url to be provided on create and update__

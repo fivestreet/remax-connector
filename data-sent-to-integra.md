@@ -1,6 +1,6 @@
 # Data sent to Integra
 
-Webhooks to api endpoints to be provided by Integra and a rough structure of the json representation that should be expected.
+A rough structure of the json representation that should be expected by integra api endpoints.
 
 ## Agent
 

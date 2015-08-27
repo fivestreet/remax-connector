@@ -37,77 +37,77 @@ __[POST] to a url to be provided on create and update__
     <col style="width: 106px">
     <col style="width: 440px">
   </colgroup>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td>id</td>
-      <td>integer</td>
-      <td>unique identifier</td>
-    </tr>
-    <tr>
-      <td>name</td>
-      <td>string</td>
-      <td>full name</td>
-    </tr>
-    <tr>
-      <td>email</td>
-      <td>string</td>
-      <td>agent's email</td>
-    </tr>
-    <tr>
-      <td>fivestreet_email</td>
-      <td>string</td>
-      <td>agent's fivestreet email</td>
-    </tr>
-    <tr>
-      <td>phone</td>
-      <td>string</td>
-      <td>agent's phone number with the country prefix included.</td>
-    </tr>
-    <tr>
-      <td>confirmed_phone</td>
-      <td>boolean</td>
-      <td>true/false</td>
-    </tr>
-    <tr>
-      <td>gmail_connected</td>
-      <td>boolean</td>
-      <td>true/false</td>
-    </tr>
-    <tr>
-      <td>brokerage_agent_identifier</td>
-      <td>string</td>
-      <td>agent identifier provided by broker</td>
-    </tr>
-    <tr>
-      <td>brokerage_office_identifier</td>
-      <td>string</td>
-      <td>agent identifier provided by broker</td>
-    </tr>
-    <tr>
-      <td>twilio_phone</td>
-      <td>string</td>
-      <td>agent's twilio assigned phone number with the country prefix included.</td>
-    </tr>
-    <tr>
-      <td>enabled</td>
-      <td>boolean</td>
-      <td>true/false</td>
-    </tr>
-    <tr>
-      <td>rostered_members_count</td>
-      <td>integer</td>
-      <td>number of agents that are part of the agent/office roster</td>
-    </tr>
-    <tr>
-      <td>claimed_at</td>
-      <td>string</td>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td>integer</td>
+    <td>unique identifier</td>
+  </tr>
+  <tr>
+    <td>name</td>
+    <td>string</td>
+    <td>full name</td>
+  </tr>
+  <tr>
+    <td>email</td>
+    <td>string</td>
+    <td>agent's email</td>
+  </tr>
+  <tr>
+    <td>fivestreet_email</td>
+    <td>string</td>
+    <td>agent's fivestreet email</td>
+  </tr>
+  <tr>
+    <td>phone</td>
+    <td>string</td>
+    <td>agent's phone number with the country prefix included.</td>
+  </tr>
+  <tr>
+    <td>confirmed_phone</td>
+    <td>boolean</td>
+    <td>true/false</td>
+  </tr>
+  <tr>
+    <td>gmail_connected</td>
+    <td>boolean</td>
+    <td>true/false</td>
+  </tr>
+  <tr>
+    <td>brokerage_agent_identifier</td>
+    <td>string</td>
+    <td>agent identifier provided by broker</td>
+  </tr>
+  <tr>
+    <td>brokerage_office_identifier</td>
+    <td>string</td>
+    <td>agent identifier provided by broker</td>
+  </tr>
+  <tr>
+    <td>twilio_phone</td>
+    <td>string</td>
+    <td>agent's twilio assigned phone number with the country prefix included.</td>
+  </tr>
+  <tr>
+    <td>enabled</td>
+    <td>boolean</td>
+    <td>true/false</td>
+  </tr>
+  <tr>
+    <td>rostered_members_count</td>
+    <td>integer</td>
+    <td>number of agents that are part of the agent/office roster</td>
+  </tr>
+  <tr>
+    <td>claimed_at</td>
+    <td>string</td>
     <td>Date represented as a string; format: yyyy-mm-dd hh:mm:ss</td>
-    </tr>
-  </table>
+  </tr>
+</table>
 
 ## Lead
 
@@ -245,17 +245,17 @@ __[POST] to a url to be provided on lead createion__
   </tr>
   <tr>
     <td>owner.email</td>
-    <td>integer</td>
+    <td>string</td>
     <td>agent's email</td>
   </tr>
   <tr>
     <td>owner.brokerage_agent_identifier</td>
-    <td>integer</td>
+    <td>string</td>
     <td>agent identifier provided by broker</td>
   </tr>
   <tr>
     <td>owner.brokerage_office_identifier</td>
-    <td>integer</td>
+    <td>string</td>
     <td>agent identifier provided by broker</td>
   </tr>
   <tr>
@@ -265,22 +265,22 @@ __[POST] to a url to be provided on lead createion__
   </tr>
   <tr>
     <td>agent.name</td>
-    <td>integer</td>
+    <td>string</td>
     <td>full name</td>
   </tr>
   <tr>
     <td>agent.email</td>
-    <td>integer</td>
+    <td>string</td>
     <td>agent's email</td>
   </tr>
   <tr>
     <td>agent.brokerage_agent_identifier</td>
-    <td>integer</td>
+    <td>string</td>
     <td>agent identifier provided by broker</td>
   </tr>
   <tr>
     <td>agent.brokerage_office_identifier</td>
-    <td>integer</td>
+    <td>string</td>
     <td>agent identifier provided by broker</td>
   </tr>
   <tr>
@@ -413,22 +413,22 @@ __[POST] to a url to be provided on claiming a lead__
   </tr>
   <tr>
     <td>agent.name</td>
-    <td>integer</td>
+    <td>string</td>
     <td>full name</td>
   </tr>
   <tr>
     <td>agent.email</td>
-    <td>integer</td>
+    <td>string</td>
     <td>agent's email</td>
   </tr>
   <tr>
     <td>agent.brokerage_agent_identifier</td>
-    <td>integer</td>
+    <td>string</td>
     <td>agent identifier provided by broker</td>
   </tr>
   <tr>
     <td>agent.brokerage_office_identifier</td>
-    <td>integer</td>
+    <td>string</td>
     <td>agent identifier provided by broker</td>
   </tr>
   <tr>

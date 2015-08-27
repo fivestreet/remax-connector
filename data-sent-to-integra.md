@@ -84,12 +84,12 @@ __[POST] to a url to be provided on create and update__
   <tr>
     <td>brokerage_agent_identifier</td>
     <td>string</td>
-    <td>agent identifier provided by broker</td>
+    <td>agent account identifier provided by broker</td>
   </tr>
   <tr>
     <td>brokerage_office_identifier</td>
     <td>string</td>
-    <td>agent identifier provided by broker</td>
+    <td>office account identifier provided by broker</td>
   </tr>
   <tr>
     <td>twilio_phone</td>
@@ -255,12 +255,12 @@ __[POST] to a url to be provided on lead createion__
   <tr>
     <td>owner.brokerage_agent_identifier</td>
     <td>string</td>
-    <td>agent identifier provided by broker</td>
+    <td>owner agent account identifier provided by broker</td>
   </tr>
   <tr>
     <td>owner.brokerage_office_identifier</td>
     <td>string</td>
-    <td>agent identifier provided by broker</td>
+    <td>owner office account identifier provided by broker</td>
   </tr>
   <tr>
     <td>agent.id</td>
@@ -280,12 +280,12 @@ __[POST] to a url to be provided on lead createion__
   <tr>
     <td>agent.brokerage_agent_identifier</td>
     <td>string</td>
-    <td>agent identifier provided by broker</td>
+    <td>agent account identifier provided by broker</td>
   </tr>
   <tr>
     <td>agent.brokerage_office_identifier</td>
     <td>string</td>
-    <td>agent identifier provided by broker</td>
+    <td>agent office identifier provided by broker</td>
   </tr>
   <tr>
     <td>referred_at</td>
@@ -366,12 +366,12 @@ __[POST] to a url to be provided on lead referral__
   <tr>
     <td>agents.brokerage_agent_identifier</td>
     <td>integer</td>
-    <td>agent identifier provided by broker</td>
+    <td>agent account identifier provided by broker</td>
   </tr>
   <tr>
     <td>agents.brokerage_office_identifier</td>
     <td>integer</td>
-    <td>agent identifier provided by broker</td>
+    <td>agent office identifier provided by broker</td>
   </tr>
 </table>
 
@@ -428,12 +428,12 @@ __[POST] to a url to be provided on claiming a lead__
   <tr>
     <td>agent.brokerage_agent_identifier</td>
     <td>string</td>
-    <td>agent identifier provided by broker</td>
+    <td>agent account identifier provided by broker</td>
   </tr>
   <tr>
     <td>agent.brokerage_office_identifier</td>
     <td>string</td>
-    <td>agent identifier provided by broker</td>
+    <td>agent office identifier provided by broker</td>
   </tr>
   <tr>
     <td>claimed_at</td>

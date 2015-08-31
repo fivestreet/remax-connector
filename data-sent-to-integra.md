@@ -1,14 +1,18 @@
 # Data sent to Integra
 
-A rough structure of the json representation that should be expected by integra api endpoints.
+A rough structure of the json representation that should be expected by the integra api endpoint.
+
+Fivestreet triggers a [POST] request to the provided url and expects a response with a 200 status code.
+Please note that the structures bellow includes a ``meta`` key with additional information about the event.
 
 ## Agent
-
-__[POST] to a url to be provided on create and update__
 
 ```
 {
     "id": 50942,
+    "meta": {
+        "event_type": "create_account"
+    },
     "name": "John Smith", 
     "email": "john.smith@example.com",
     "fivestreet_email": "name@fivestreet.me",
@@ -50,6 +54,11 @@ __[POST] to a url to be provided on create and update__
     <td>id</td>
     <td>integer</td>
     <td>unique identifier</td>
+  </tr>
+  <tr>
+    <td>meta.event_type</td>
+    <td>string</td>
+    <td>Possible values: "create_account" or "update_account"</td>
   </tr>
   <tr>
     <td>name</td>
@@ -115,11 +124,14 @@ __[POST] to a url to be provided on create and update__
 
 ## Lead
 
-__[POST] to a url to be provided on lead createion__
+For extra data please refer to [remax-connector](https://github.com/fivestreet/remax-connector)
 
 ```
 {
     "id": 20039,
+    "meta": {
+        "event_type": "create_lead"
+    },
     "name": "James Andersen",
     "email": "james.andersen@example.com",
     "phone": "+12345678910",
@@ -152,7 +164,8 @@ __[POST] to a url to be provided on lead createion__
         "brokerage_office_identifier": "5678"
     },
     "claimed_at": "2013-11-01 20:35:49",
-    "created_at": "2013-10-10 09:23:48"
+    "created_at": "2013-10-10 09:23:48",
+    "extra_data": {}
 }
 ```
 
@@ -172,6 +185,11 @@ __[POST] to a url to be provided on lead createion__
     <td>id</td>
     <td>integer</td>
     <td>unique identifier</td>
+  </tr>
+  <tr>
+    <td>meta.event_type</td>
+    <td>string</td>
+    <td>Possible value: "create_lead"</td>
   </tr>
   <tr>
     <td>name</td>
@@ -297,22 +315,28 @@ __[POST] to a url to be provided on lead createion__
     <td>string</td>
     <td>Date represented as a string; format: yyyy-mm-dd hh:mm:ss</td>
   </tr>
+  <tr>
+    <td>extra_data.(key)></td>
+    <td>(key_type)</td>
+    <td>Meta-data passed through</td>
+  </tr>
 </table>
 
 ## Referral
 
-This action takes place when a lead gets referred to a team or a group of agents.
+This event type takes place when a lead gets referred to a team or a group of agents.
 The collection of agents represents all the agents that received the referral identified
 by ``lead_id``.
 
 _Note: this collection of agents can represent **n** agents_
 
 
-__[POST] to a url to be provided on lead referral__
-
 ```
 {
     "lead_id": 20039,
+    "meta": {
+        "event_type": "refer_lead"
+    },
     "referred_at": "2013-11-01 20:35:49",
     "agents": [
         {
@@ -351,6 +375,11 @@ __[POST] to a url to be provided on lead referral__
     <td>The id of the lead</td>
   </tr>
   <tr>
+    <td>meta.event_type</td>
+    <td>string</td>
+    <td>Possible value: "refer_lead"</td>
+  </tr>
+  <tr>
     <td>referred_at</td>
     <td>string</td>
     <td>Date represented as a string; format: yyyy-mm-dd hh:mm:ss</td>
@@ -384,11 +413,12 @@ __[POST] to a url to be provided on lead referral__
 
 ## Claim
 
-__[POST] to a url to be provided on claiming a lead__
-
 ```
 {
     "lead_id": 20039,
+    "meta": {
+        "event_type: "claim_lead"
+    },
     "agent": {
         "id": 50942,
         "name": "John Smith", 
@@ -416,6 +446,11 @@ __[POST] to a url to be provided on claiming a lead__
     <td>lead_id</td>
     <td>integer</td>
     <td>The id of the lead</td>
+  </tr>
+  <tr>
+    <td>meta.event_type</td>
+    <td>string</td>
+    <td>Possible value: "claim_lead"</td>
   </tr>
   <tr>
     <td>agent.id</td>

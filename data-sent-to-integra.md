@@ -301,6 +301,13 @@ __[POST] to a url to be provided on lead createion__
 
 ## Referral
 
+This action takes place when a lead gets referred to a team or a group of agents.
+The collection of agents represents all the agents that received the referral identified
+by ``lead_id``.
+
+_Note: this collection of agents can represent **n** agents_
+
+
 __[POST] to a url to be provided on lead referral__
 
 ```

@@ -10,7 +10,7 @@ Please note that the structures bellow includes a ``meta`` key with additional i
 ```
 {
     "meta": {
-        "event_type": "create_account"
+        "event_type": "create_agent"
     },
     agent: {
         "id": 50942,
@@ -55,7 +55,7 @@ Please note that the structures bellow includes a ``meta`` key with additional i
   <tr>
     <td>meta.event_type</td>
     <td>string</td>
-    <td>Possible values: "create_account" or "update_account"</td>
+    <td>Possible values: "create_agent" or "update_agent"</td>
   </tr>
   <tr>
     <td>agent.id</td>

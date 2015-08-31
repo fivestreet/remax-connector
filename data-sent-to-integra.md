@@ -133,7 +133,7 @@ For extra data please refer to [remax-connector](https://github.com/fivestreet/r
     "meta": {
         "event_type": "create_lead"
     },
-    {
+    "lead": {
         "id": 20039,
         "name": "James Andersen",
         "email": "james.andersen@example.com",

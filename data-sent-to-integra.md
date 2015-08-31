@@ -316,7 +316,7 @@ For extra data please refer to [remax-connector](https://github.com/fivestreet/r
     <td>Date represented as a string; format: yyyy-mm-dd hh:mm:ss</td>
   </tr>
   <tr>
-    <td>extra_data.(key)></td>
+    <td>extra_data.(key)</td>
     <td>(key_type)</td>
     <td>Meta-data passed through</td>
   </tr>

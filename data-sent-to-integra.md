@@ -491,3 +491,159 @@ _Note: this collection of agents can represent **n** agents_
     <td>Date represented as a string; format: yyyy-mm-dd hh:mm:ss</td>
   </tr>
 </table>
+
+## Assign Lead
+
+This event will indicate when a lead has been assigned an office or routed to an agent based on connected agent logic inside the FiveStreet Connector.
+
+```
+{
+    "meta": {
+        "event_type: "assign_lead"
+    },
+    “assign": {
+      “lead": {
+        "name": "James Andersen",
+        "email": "james.andersen@example.com",
+        "phone": "+12345678910",
+        "zipcode": "90210",
+        "source": "RE/MAX.com",
+        "sub_source": "Listing Inquiry",
+        "brokerage_agent_identifier": "1234",
+        "brokerage_agent_type": "favourited",
+        "brokerage_office_identifier": "5678"
+      },
+      “assigned_at": "2013-11-01 20:35:49"
+    }
+}
+```
+
+<table style="undefined;table-layout: fixed; width: 849px">
+  <colgroup>
+    <col style="width: 188px">
+    <col style="width: 115px">
+    <col style="width: 106px">
+    <col style="width: 440px">
+  </colgroup>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>meta.event_type</td>
+    <td>string</td>
+    <td>Possible value: "assign_lead"</td>
+  </tr>
+  <tr>
+    <td>assign.lead.name</td>
+    <td>string</td>
+    <td>full name</td>
+  </tr>
+  <tr>
+    <td>assign.lead.email</td>
+    <td>string</td>
+    <td>agent's email</td>
+  </tr>
+  <tr>
+    <td>assign.lead.zipcode</td>
+    <td>string</td>
+    <td>Zip code for the inquiry</td>
+  </tr>
+  <tr>
+    <td>assign.lead.source</td>
+    <td>string</td>
+    <td>the origin of the lead (Remax,Realtor and others)</td>
+  </tr>
+  <tr>
+    <td>assign.lead.sub_source</td>
+    <td>string</td>
+    <td>the secondary origin of the lead (Listing Inquiry, Agent Profile etc)</td>
+  </tr>
+  <tr>
+    <td>assign.lead.brokerage_agent_identifier</td>
+    <td>string</td>
+    <td>agent account identifier provided by broker</td>
+  </tr>
+  <tr>
+    <td>assign.lead.brokerage_agent_type</td>
+    <td>string</td>
+    <td>type of routing for the agent e.g. "favourited","connected" etc</td>
+  </tr>
+  <tr>
+    <td>assign.lead.brokerage_office_identifier</td>
+    <td>string</td>
+    <td>agent office identifier provided by broker</td>
+  </tr>
+  <tr>
+    <td>assign.assigned_at</td>
+    <td>string</td>
+    <td>Date represented as a string; format: yyyy-mm-dd hh:mm:ss</td>
+  </tr>
+</table>
+
+## Select Possible Offices
+
+This event will return the offices in the selection pool for a particular zip code for auditing purposes.
+''offices'' is the collection of offices in a particular zipcode available in the pool for assignment
+
+```
+{
+    "meta": {
+        "event_type": “select_possible_offices"
+    },
+    “possible_offices": {
+        “zipcode": "90210",
+        “retrieved_at": "2013-11-01 20:35:49",
+        “offices": [
+            {
+                "id": “12354",
+                “weight": 0.75
+            },
+            {
+                "id": “56474",
+                “weight": 0.25
+            }
+        ]
+    }
+}
+```
+
+<table style="undefined;table-layout: fixed; width: 849px">
+  <colgroup>
+    <col style="width: 188px">
+    <col style="width: 115px">
+    <col style="width: 106px">
+    <col style="width: 440px">
+  </colgroup>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>meta.select_possible_offices</td>
+    <td>string</td>
+    <td>Possible value: "select_offices"</td>
+  </tr>
+  <tr>
+    <td>possible_offices.zipcode</td>
+    <td>string</td>
+    <td>Zip code for the inquiry</td>
+  </tr>
+  <tr>
+    <td>possible_offices.retrieved_at</td>
+    <td>string</td>
+    <td>Date represented as a string; format: yyyy-mm-dd hh:mm:ss</td>
+  </tr>
+  <tr>
+    <td>possible_offices.offices.id</td>
+    <td>string</td>
+    <td>office id provided by the broker</td>
+  </tr>
+  <tr>
+    <td>possible_offices.offices.weight</td>
+    <td>float</td>
+    <td>office weighting provided by the broker</td>
+  </tr>
+</table>

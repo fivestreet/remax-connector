@@ -582,6 +582,96 @@ This event will indicate when a lead has been assigned an office or routed to an
   </tr>
 </table>
 
+## Reassign Lead
+
+This event will indicate the connector is reprocessing the lead due to error received from FiveStreet.
+
+```
+{
+    "meta": {
+        "event_type: "reassign_lead"
+    },
+    “reassign": {
+      “lead": {
+        "name": "James Andersen",
+        "email": "james.andersen@example.com",
+        "phone": "+12345678910",
+        "zipcode": "90210",
+        "source": "RE/MAX.com",
+        "sub_source": "Listing Inquiry",
+        "brokerage_agent_identifier": "1234",
+        "brokerage_agent_type": "favourited",
+        "brokerage_office_identifier": "5678"
+      },
+      “reassigned_at": "2013-11-01 20:35:49"
+    }
+}
+```
+
+<table style="undefined;table-layout: fixed; width: 849px">
+  <colgroup>
+    <col style="width: 188px">
+    <col style="width: 115px">
+    <col style="width: 106px">
+    <col style="width: 440px">
+  </colgroup>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>meta.event_type</td>
+    <td>string</td>
+    <td>Possible value: "reassign_lead"</td>
+  </tr>
+  <tr>
+    <td>reassign.lead.name</td>
+    <td>string</td>
+    <td>full name</td>
+  </tr>
+  <tr>
+    <td>reassign.lead.email</td>
+    <td>string</td>
+    <td>agent's email</td>
+  </tr>
+  <tr>
+    <td>reassign.lead.zipcode</td>
+    <td>string</td>
+    <td>Zip code for the inquiry</td>
+  </tr>
+  <tr>
+    <td>reassign.lead.source</td>
+    <td>string</td>
+    <td>the origin of the lead (Remax,Realtor and others)</td>
+  </tr>
+  <tr>
+    <td>reassign.lead.sub_source</td>
+    <td>string</td>
+    <td>the secondary origin of the lead (Listing Inquiry, Agent Profile etc)</td>
+  </tr>
+  <tr>
+    <td>reassign.lead.brokerage_agent_identifier</td>
+    <td>string</td>
+    <td>agent account identifier provided by broker</td>
+  </tr>
+  <tr>
+    <td>reassign.lead.brokerage_agent_type</td>
+    <td>string</td>
+    <td>type of routing for the agent e.g. "favourited","connected" etc</td>
+  </tr>
+  <tr>
+    <td>reassign.lead.brokerage_office_identifier</td>
+    <td>string</td>
+    <td>agent office identifier provided by broker</td>
+  </tr>
+  <tr>
+    <td>reassign.reassigned_at</td>
+    <td>string</td>
+    <td>Date represented as a string; format: yyyy-mm-dd hh:mm:ss</td>
+  </tr>
+</table>
+
 ## Select Possible Offices
 
 This event will return the offices in the selection pool for a particular zip code for auditing purposes.
@@ -645,5 +735,101 @@ This event will return the offices in the selection pool for a particular zip co
     <td>possible_offices.offices.weight</td>
     <td>float</td>
     <td>office weighting provided by the broker</td>
+  </tr>
+</table>
+
+## Error assigning lead
+
+This event will indicate that there was an error received from FiveStreet assigning the lead
+
+```
+{
+    "meta": {
+        "event_type: "error_assigning_lead"
+    },
+    “error": {
+      “lead": {
+        "name": "James Andersen",
+        "email": "james.andersen@example.com",
+        "phone": "+12345678910",
+        "zipcode": "90210",
+        "source": "RE/MAX.com",
+        "sub_source": "Listing Inquiry",
+        "brokerage_agent_identifier": "1234",
+        "brokerage_agent_type": "favourited",
+        "brokerage_office_identifier": "5678"
+      },
+      “message": "agent_id not found in FiveStreet",
+      “error_received_at": "2013-11-01 20:35:49"
+    }
+}
+```
+
+<table style="undefined;table-layout: fixed; width: 849px">
+  <colgroup>
+    <col style="width: 188px">
+    <col style="width: 115px">
+    <col style="width: 106px">
+    <col style="width: 440px">
+  </colgroup>
+  <tr>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>meta.event_type</td>
+    <td>string</td>
+    <td>Possible value: "reassign_lead"</td>
+  </tr>
+  <tr>
+    <td>error.lead.name</td>
+    <td>string</td>
+    <td>full name</td>
+  </tr>
+  <tr>
+    <td>error.lead.email</td>
+    <td>string</td>
+    <td>agent's email</td>
+  </tr>
+  <tr>
+    <td>error.lead.zipcode</td>
+    <td>string</td>
+    <td>Zip code for the inquiry</td>
+  </tr>
+  <tr>
+    <td>error.lead.source</td>
+    <td>string</td>
+    <td>the origin of the lead (Remax,Realtor and others)</td>
+  </tr>
+  <tr>
+    <td>error.lead.sub_source</td>
+    <td>string</td>
+    <td>the secondary origin of the lead (Listing Inquiry, Agent Profile etc)</td>
+  </tr>
+  <tr>
+    <td>error.lead.brokerage_agent_identifier</td>
+    <td>string</td>
+    <td>agent account identifier provided by broker</td>
+  </tr>
+  <tr>
+    <td>error.lead.brokerage_agent_type</td>
+    <td>string</td>
+    <td>type of routing for the agent e.g. "favourited","connected" etc</td>
+  </tr>
+  <tr>
+    <td>error.lead.brokerage_office_identifier</td>
+    <td>string</td>
+    <td>agent office identifier provided by broker</td>
+  </tr>
+  <tr>
+    <td>error.message</td>
+    <td>string</td>
+    <td>Description of the error received from FiveStreet</td>
+  </tr>
+  <tr>
+    <td>error.error_received_at</td>
+    <td>string</td>
+    <td>Date represented as a string; format: yyyy-mm-dd hh:mm:ss</td>
   </tr>
 </table>

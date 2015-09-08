@@ -25,7 +25,6 @@ Please note that the structures bellow includes a ``meta`` key with additional i
         "twilio_phone": "+1240333222",
         "enabled": true,
         "rostered_members_count": 5,
-        "claimed_at": "2013-11-01 20:35:49",
         "mls_identities": [
             {
                 "board_name": "board 2",

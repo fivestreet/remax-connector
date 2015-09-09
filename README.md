@@ -73,37 +73,37 @@ Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ie
           <tr>
             <td>source</td>
             <td>string</td>
-            <td></td>
+            <td>Yes</td>
             <td>The main source of the lead e.g. "Remax.com"</td>
           </tr>
           <tr>
             <td>sub_source</td>
             <td>string</td>
-            <td></td>
+            <td>No</td>
             <td>The sub source of the lead e.g "Listing Inquiry"</td>
           </tr>
           <tr>
             <td>name</td>
             <td>string</td>
-            <td></td>
+            <td>No</td>
             <td>The name of the lead</td>
           </tr>
           <tr>
             <td>email</td>
             <td>string</td>
-            <td></td>
+            <td>Yes if email not provided</td>
             <td>The email of the lead</td>
           </tr>
           <tr>
             <td>phone</td>
             <td>string</td>
-            <td></td>
+            <td>Yes if email not provided</td>
             <td>The phone number of the lead</td>
           </tr>
           <tr>
             <td>message</td>
             <td>string</td>
-            <td></td>
+            <td>No</td>
             <td>Any additional messages submitted with the lead</td>
           </tr>
           <tr>
@@ -127,7 +127,7 @@ Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ie
           <tr>
             <td>property.address.zipcode</td>
             <td>string</td>
-            <td>No</td>
+            <td>Yes</td>
             <td>Zip code for the subject property</td>
           </tr>
           <tr>
@@ -139,43 +139,43 @@ Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ie
           <tr>
             <td>property.url</td>
             <td>string</td>
-            <td></td>
+            <td>No</td>
             <td>Url for the subject property</td>
           </tr>
           <tr>
             <td>property.list_price</td>
             <td>string</td>
-            <td></td>
+            <td>No</td>
             <td>List price for the subject property</td>
           </tr>
           <tr>
             <td>property.mls_id</td>
             <td>string</td>
-            <td></td>
+            <td>No</td>
             <td>MLS ID for the subject property</td>
           </tr>
           <tr>
             <td>extra_data</td>
             <td>&lt;string,string&gt;</td>
-            <td></td>
-            <td></td>
+            <td>Yes</td>
+            <td>Extra data like search history url</td>
           </tr>
           <tr>
             <td>routing.agent_id</td>
             <td>string</td>
-            <td></td>
+            <td>Yes</td>
             <td>The RE/MAX ID for the agent</td>
           </tr>
           <tr>
             <td>routing.type</td>
             <td>"favorited",<br/>"connected",<br/>"listing_agent",<br/>"new_lead"</td>
-            <td></td>
+            <td>Yes if agent_id provide</td>
             <td>The type of routing logic to employ</td>
           </tr>
           <tr>
             <td>routing.office_id</td>
             <td>string</td>
-            <td></td>
+            <td>Yes if agent_id not provided</td>
             <td>The office ID for the agent</td>
           </tr>
         </table>

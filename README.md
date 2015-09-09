@@ -48,11 +48,18 @@ Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ie
                         "key": "value"
                     }
                 },
-                "routing": {
-                        "agent_id" : "12345",
-                        "type" : "favorited",
-                        "office_id": "A987678"
-                    }
+                "routing": 
+                    [   {
+                            "agent_id" : "12345",
+                            "type" : "favorited",
+                            "office_id": "A987678"
+                        },
+                        {
+                            "agent_id" : "67890",
+                            "type" : "listing_agent",
+                            "office_id": "A15784"
+                        }
+                    ]
             }
     
     + All values are strings

@@ -116,11 +116,6 @@ Please note that the structures bellow includes a ``meta`` key with additional i
     <td>integer</td>
     <td>number of agents that are part of the agent/office roster</td>
   </tr>
-  <tr>
-    <td>agent.claimed_at</td>
-    <td>string</td>
-    <td>Date represented as a string; format: yyyy-mm-dd hh:mm:ss</td>
-  </tr>
 </table>
 
 ## Lead
@@ -143,8 +138,7 @@ For extra data please refer to [remax-connector](https://github.com/fivestreet/r
                 "street":"111 street address",
                 "city" : "Seattle",
                 "state" : "WA",
-                "zipcode" : "98230",
-                "country" : "US"
+                "zipcode" : "98230"
             },
             "url": "http://property.com/url",
             "list_price": "250000",
@@ -233,11 +227,6 @@ For extra data please refer to [remax-connector](https://github.com/fivestreet/r
     <td>lead.property.address.zipcode</td>
     <td>string</td>
     <td>Zip code for the subject property</td>
-  </tr>
-  <tr>
-    <td>lead.property.address.country</td>
-    <td>string</td>
-    <td>Country for the subject property ("CA", "US")</td>
   </tr>
   <tr>
     <td>lead.property.url</td>

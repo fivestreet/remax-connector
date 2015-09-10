@@ -159,8 +159,8 @@ For extra data please refer to [remax-connector](https://github.com/fivestreet/r
             "brokerage_agent_identifier": "1234",
             "brokerage_office_identifier": "5678"
         },
-        "claimed_at": "2013-11-01 20:35:49",
-        "created_at": "2013-10-10 09:23:48",
+        "claimed_at": "2012-04-23T18:25:43.511Z",
+        "created_at": "2013-10-10T09:23:48.552Z",
         "extra_data": {}
     }
 }
@@ -300,12 +300,12 @@ For extra data please refer to [remax-connector](https://github.com/fivestreet/r
   <tr>
     <td>lead.referred_at</td>
     <td>string</td>
-    <td>Date represented as a string; format: yyyy-mm-dd hh:mm:ss</td>
+    <td>Date represented as a string; format: YYYY-MM-DDTHH:MM:SS.:::Z</td>
   </tr>
   <tr>
     <td>lead.claimed_at</td>
     <td>string</td>
-    <td>Date represented as a string; format: yyyy-mm-dd hh:mm:ss</td>
+    <td>Date represented as a string; format: YYYY-MM-DDTHH:MM:SS.:::Z</td>
   </tr>
   <tr>
     <td>lead.extra_data.(key)</td>
@@ -330,7 +330,7 @@ _Note: this collection of agents can represent **n** agents_
     },
     "referral": {
         "lead_id": 20039,
-        "referred_at": "2013-11-01 20:35:49",
+        "referred_at": "2013-10-10T09:23:48.552Z",
         "agents": [
             {
                 "id": 50942,
@@ -376,7 +376,7 @@ _Note: this collection of agents can represent **n** agents_
   <tr>
     <td>referral.referred_at</td>
     <td>string</td>
-    <td>Date represented as a string; format: yyyy-mm-dd hh:mm:ss</td>
+    <td>Date represented as a string; format: YYYY-MM-DDTHH:MM:SS.:::Z</td>
   </tr>
   <tr>
     <td>referral.agents.id</td>
@@ -421,7 +421,7 @@ _Note: this collection of agents can represent **n** agents_
           "brokerage_agent_identifier": "1234",
           "brokerage_office_identifier": "5678"
       },
-      "claimed_at": "2013-11-01 20:35:49"
+      "claimed_at": "2013-10-10T09:23:48.552Z"
     }
 }
 ```
@@ -476,7 +476,7 @@ _Note: this collection of agents can represent **n** agents_
   <tr>
     <td>claim.claimed_at</td>
     <td>string</td>
-    <td>Date represented as a string; format: yyyy-mm-dd hh:mm:ss</td>
+    <td>Date represented as a string; format: YYYY-MM-DDTHH:MM:SS.:::Z</td>
   </tr>
 </table>
 

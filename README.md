@@ -98,7 +98,7 @@ Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ie
           <tr>
             <td>email</td>
             <td>string</td>
-            <td>Yes if email not provided</td>
+            <td>Yes if phone not provided</td>
             <td>The email of the lead</td>
           </tr>
           <tr>

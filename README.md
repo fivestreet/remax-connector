@@ -168,19 +168,19 @@ Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ie
             <td>Extra data like search history url</td>
           </tr>
           <tr>
-            <td>routing.agent_id</td>
+            <td>routing_rules.agent_id</td>
             <td>string</td>
             <td>Yes</td>
             <td>The RE/MAX ID for the agent</td>
           </tr>
           <tr>
-            <td>routing.type</td>
+            <td>routing_rules.type</td>
             <td>"favorited",<br/>"connected",<br/>"listing_agent",<br/>"new_lead"</td>
             <td>Yes if agent_id provide</td>
             <td>The type of routing logic to employ</td>
           </tr>
           <tr>
-            <td>routing.office_id</td>
+            <td>routing_rules.office_id</td>
             <td>string</td>
             <td>Yes if agent_id not provided</td>
             <td>The office ID for the agent</td>

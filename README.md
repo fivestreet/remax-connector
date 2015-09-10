@@ -48,7 +48,7 @@ Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ie
                         "key": "value"
                     }
                 },
-                "routing": 
+                "routing_rules": 
                     [   {
                             "agent_id" : "12345",
                             "type" : "favorited",

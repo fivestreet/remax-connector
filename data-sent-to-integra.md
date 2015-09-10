@@ -489,13 +489,6 @@ _Note: this collection of agents can represent **n** agents_
     },
     "unclaim": {
       "lead_id": 20039,
-      "agent": {
-          "id": 50942,
-          "name": "John Smith", 
-          "email": "john.smith@example.com",
-          "brokerage_agent_identifier": "1234",
-          "brokerage_office_identifier": "5678"
-      },
       "unclaimed_at": "2013-10-10T09:23:48.552Z"
     }
 }
@@ -519,37 +512,12 @@ _Note: this collection of agents can represent **n** agents_
     <td>Possible value: "unclaim_lead"</td>
   </tr>
   <tr>
-    <td>unclaim.lead_id</td>
+    <td>lead_id</td>
     <td>integer</td>
     <td>The id of the lead</td>
   </tr>
   <tr>
-    <td>unclaim.agent.id</td>
-    <td>integer</td>
-    <td>The fivestreet id of the agent</td>
-  </tr>
-  <tr>
-    <td>unclaim.agent.name</td>
-    <td>string</td>
-    <td>full name</td>
-  </tr>
-  <tr>
-    <td>unclaim.agent.email</td>
-    <td>string</td>
-    <td>agent's email</td>
-  </tr>
-  <tr>
-    <td>unclaim.agent.brokerage_agent_identifier</td>
-    <td>string</td>
-    <td>agent account identifier provided by broker</td>
-  </tr>
-  <tr>
-    <td>unclaim.agent.brokerage_office_identifier</td>
-    <td>string</td>
-    <td>agent office identifier provided by broker</td>
-  </tr>
-  <tr>
-    <td>unclaim.unclaimed_at</td>
+    <td>unclaimed_at</td>
     <td>string</td>
     <td>Date represented as a string; format: YYYY-MM-DDTHH:MM:SS.:::Z</td>
   </tr>

@@ -63,7 +63,7 @@ Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ie
             }
     
     + All values are strings
-    + Routing Type can be of type "connected", "favourited", "listing_agent", "new_lead"
+    + Routing Rules Type can be of type "direct_to_agent", "connected", "favourited", "listing_agent", "new_lead"
     + <table style="undefined;table-layout: fixed; width: 849px">
         <colgroup>
         <col style="width: 188px">
@@ -175,7 +175,7 @@ Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ie
           </tr>
           <tr>
             <td>routing_rules.type</td>
-            <td>"favorited",<br/>"connected",<br/>"listing_agent",<br/>"new_lead"</td>
+            <td>"direct_to_agent",<br>"favorited",<br/>"connected",<br/>"listing_agent",<br/>"new_lead"</td>
             <td>Yes if agent_id provide</td>
             <td>The type of routing logic to employ</td>
           </tr>

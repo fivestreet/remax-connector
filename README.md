@@ -7,9 +7,9 @@ The FiveStreet Connector will receive a lead from RE/MAX, process the lead and s
 
 # Authentication
 
-All requests must include a Authorization HTTP header, or a 401 (Unauthorized) response will be sent:
+All requests must include a user_key HTTP header, or a 401 (Unauthorized) response will be sent:
 
-+ **Authorization: \<Base64 encoded value of "username:api_key"\>**
++ **user_key: \<"API Key as provided by FiveStreet\>**
 
 # HTTP Errors
 

@@ -43,6 +43,7 @@ Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ie
                         "mls_id": "88658565886"
                     },
                     "extra_data": {
+                        "request_id" : "56748844897554897",
                         "is_rental" : "true",
                         "web_activity_url": "http://webactivity.url/",
                         "key": "value"

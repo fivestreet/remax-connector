@@ -251,7 +251,7 @@ For extra data please refer to [remax-connector](https://github.com/fivestreet/r
   <tr>
     <td>meta.event_type</td>
     <td>string</td>
-    <td>Possible value: "create_lead"</td>
+    <td>Possible value: "create_lead", "update_lead"</td>
   </tr>
   <tr>
     <td>lead.id</td>

@@ -175,7 +175,7 @@ Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ie
           <tr>
             <td>routing.type</td>
             <td>"direct_to_agent",<br>"favorited",<br/>"connected",<br/>"listing_agent",<br/>"new_lead"</td>
-            <td>Yes if agent_id provide</td>
+            <td>Yes if agent_id provided</td>
             <td>The type of routing logic to employ</td>
           </tr>
           <tr>

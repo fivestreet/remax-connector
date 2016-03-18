@@ -34,19 +34,19 @@ Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ie
                     "errorMessage": "",
                     "property": {
                         "address": {
-                            "street":"111 street address",
-                            "city" : "Seattle",
-                            "state" : "WA",
-                            "zipcode" : "98230",
-                            "country" : "US"
+                            "street": "111 street address",
+                            "city": "Seattle",
+                            "state": "WA",
+                            "zipcode": "98230",
+                            "country": "US"
                         },
                         "url": "http://property.com/url",
                         "list_price": "250000",
                         "mls_id": "88658565886"
                     },
                     "extra_data": {
-                        "Infusion-Request-Id" : "db684ba3-b26c-40d2-a7d0-304d48f4ba4b",
-                        "is_rental" : "true",
+                        "Infusion-Request-Id": "db684ba3-b26c-40d2-a7d0-304d48f4ba4b",
+                        "is_rental": "true",
                         "web_activity_url": "http://webactivity.url/",
                         "key": "value"
                     }
@@ -54,8 +54,8 @@ Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ie
                 "routing_rules": "",
                 "routing":
                     {
-                        "agent_id" : "12345",
-                        "type" : "favorited",
+                        "agent_id": "12345",
+                        "type": "favorited",
                         "static": false,
                         "office_id": "A987678"
                     }

@@ -180,7 +180,7 @@ Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ie
           </tr>
           <tr>
             <td>routing.static</td>
-            <td>Boolean</td>
+            <td>boolean</td>
             <td>No, defaults to <i>false</i></td>
             <td><i>false</i> indicates lead will generate communication to agent/prospect and routing will be applied to lead</td>
           </tr>

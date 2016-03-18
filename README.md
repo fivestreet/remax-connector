@@ -26,10 +26,12 @@ Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ie
                 "lead": {
                     "source": "RE/MAX.com",
                     "sub_source": "Listing Inquiry",
+                    "request_id": "db684ba3-b26c-40d2-a7d0-304d48f4ba4b",
                     "name": "John Smith",
                     "email": "john.smith@email.com",
                     "phone": "222-333-1234",
                     "message": "I'm Interested in viewing this property",
+                    "errorMessage": "",
                     "property": {
                         "address": {
                             "street":"111 street address",
@@ -43,28 +45,24 @@ Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ie
                         "mls_id": "88658565886"
                     },
                     "extra_data": {
-                        "request_id" : "56748844897554897",
+                        "Infusion-Request-Id" : "db684ba3-b26c-40d2-a7d0-304d48f4ba4b",
                         "is_rental" : "true",
                         "web_activity_url": "http://webactivity.url/",
                         "key": "value"
                     }
                 },
-                "routing_rules": 
-                    [   {
-                            "agent_id" : "12345",
-                            "type" : "favorited",
-                            "office_id": "A987678"
-                        },
-                        {
-                            "agent_id" : "67890",
-                            "type" : "listing_agent",
-                            "office_id": "A15784"
-                        }
-                    ]
+                "routing_rules": "",
+                "routing":
+                    {
+                        "agent_id" : "12345",
+                        "type" : "favorited",
+                        "static": false,
+                        "office_id": "A987678"
+                    }
             }
     
     + All values are strings
-    + Routing Rules Type can be of type "direct_to_agent", "connected", "favourited", "listing_agent", "new_lead"
+    + Routing Type can be of type "connected", "favourited", "listing_agent", "new_lead"
     + <table style="undefined;table-layout: fixed; width: 849px">
         <colgroup>
         <col style="width: 188px">
@@ -169,19 +167,25 @@ Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ie
             <td>Extra data like search history url</td>
           </tr>
           <tr>
-            <td>routing_rules.agent_id</td>
+            <td>routing.agent_id</td>
             <td>string</td>
             <td>Yes</td>
             <td>The RE/MAX ID for the agent</td>
           </tr>
           <tr>
-            <td>routing_rules.type</td>
+            <td>routing.type</td>
             <td>"direct_to_agent",<br>"favorited",<br/>"connected",<br/>"listing_agent",<br/>"new_lead"</td>
             <td>Yes if agent_id provide</td>
             <td>The type of routing logic to employ</td>
           </tr>
           <tr>
-            <td>routing_rules.office_id</td>
+            <td>routing.static</td>
+            <td>Boolean</td>
+            <td>No, defaults to <i>false</i></td>
+            <td><i>false</i> indicates lead will generate communication to agent/prospect and routing will be applied to lead</td>
+          </tr>
+          <tr>
+            <td>routing.office_id</td>
             <td>string</td>
             <td>Yes if agent_id not provided</td>
             <td>The office ID for the agent</td>

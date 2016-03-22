@@ -56,7 +56,7 @@ Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ie
                     {
                         "agent_id": "12345",
                         "type": "favorited",
-                        "static": false,
+                        "notify": true,
                         "office_id": "A987678"
                     }
             }
@@ -179,10 +179,10 @@ Errors will be returned as a http problem. (https://tools.ietf.org/html/draft-ie
             <td>The type of routing logic to employ</td>
           </tr>
           <tr>
-            <td>routing.static</td>
+            <td>routing.notify</td>
             <td>boolean</td>
-            <td>No, defaults to <i>false</i></td>
-            <td><i>false</i> indicates lead will generate communication to agent/prospect and routing will be applied to lead</td>
+            <td>No, defaults to <i>true</i></td>
+            <td><i>true</i> indicates lead will generate communication to agent/prospect and routing will be applied to lead</td>
           </tr>
           <tr>
             <td>routing.office_id</td>

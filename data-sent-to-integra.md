@@ -52,7 +52,7 @@ FiveStreet digitally signs all payloads sent to a webhook. This is done with a t
 </table>
 
 To verify that the payload is actually coming from FiveStreet, the signature must be verified upon receipt of the webhook. This is done as follows:
-+ Concatentate the timestamp (converted to a string) and the token.
++ Concatenate the timestamp (converted to a string) and the token.
 + Encode the resulting string with the HMAC algorithm (using your API Key as a key and SHA256 digest mode).
 + Compare the resulting hexdigest to the signature.
 + Optionally, you can cache the token value locally and not honor any subsequent request with the same token. This will prevent replay attacks.
